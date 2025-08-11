@@ -1,9 +1,11 @@
 import TypeMarker from '../typeMarker/typeMarker';
-import { Container, TypeSection, Title } from './style';
+import { Container, TypeSection, Title, InfoSection, ButtonSection } from './style';
+import InteractionBtn from '../interactionBtn/interactionBtn.jsx';
 
 function PokemonDesc() {
   return (
     <Container>
+        <InfoSection>
         <p>
             For some time after its birth, it uses the nutrients that are packed into the seed on its back in order to grow.
         </p>
@@ -19,6 +21,10 @@ function PokemonDesc() {
             <TypeMarker type="Flying"/>
             <TypeMarker type="Psychic"/>
         </TypeSection>
+        </InfoSection>
+        <ButtonSection>
+            <InteractionBtn />
+        </ButtonSection>
     </Container>
   );
 }
