@@ -6,6 +6,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: blue;
+  background-color: rgba(179, 13, 13, 1);
 `;
 
