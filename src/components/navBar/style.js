@@ -20,7 +20,7 @@ export const BtnContainer = styled.div`
 export const BigButton = styled.button`
   width: 50%;
   height: 100%;
-  background: #ccc;
+  background: #d62f2fff;
   border: none;
   border: 1px solid black;
 
@@ -28,7 +28,7 @@ export const BigButton = styled.button`
   text-align: center;
 
   &:hover {
-    background: #999;
+    background: #f71414ff;
     cursor: pointer;
   }
 `;
@@ -42,13 +42,15 @@ export const MidBtn = styled.button`
   transform: translateX(-50%);
   width: 40%;
   height: 50%;
-  background: #ff6347;
+  background: #282828ff;
   border-radius: 20px 20px 0 0;
   border: 1px solid black;
   z-index: 1;
+  color: #fff;
+  font-size: 30px;
 
   &:hover {
-    background: #999;
+    background: #050505ff;
     cursor: pointer;
   }
 `;

@@ -16,12 +16,17 @@ export const Container = styled.div`
 `;
 
 export const PokePictureContainer = styled.div`
-  height: 40vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; 
-`
+  align-items: center;
+
+  background-image: url(${props => props.bgImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
 
 
 export const PokePicture = styled.img`
