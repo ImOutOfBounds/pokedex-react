@@ -4,6 +4,7 @@ import ContainerLeft from './components/containerLeft/containerLeft';
 import ContainerRight from './components/containerRight/containerRight';
 
 import styled from 'styled-components';
+import Rectangle from './components/rectangle/Rectangle';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ function App() {
     <Wrapper>
       <ContainerLeft></ContainerLeft>
       <ContainerRight></ContainerRight>
+      <Rectangle></Rectangle>
     </Wrapper>
     </>
   );

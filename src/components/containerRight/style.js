@@ -5,7 +5,5 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-
   background-color: rgba(179, 13, 13, 1);
 `;
-

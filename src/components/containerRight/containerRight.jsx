@@ -6,10 +6,12 @@ import PokemonDesc from '../pokemonDescription/pokemonDesciption';
 
 function ContainerRight() {
   return (
-    <Container>
-        < NavBar/>
-        < PokemonDesc />
-    </Container>
+    <>
+        <Container>
+            < NavBar/>
+            < PokemonDesc />
+        </Container>
+    </>
   );
 }
 
