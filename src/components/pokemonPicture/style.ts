@@ -1,0 +1,21 @@
+'use client';
+
+import styled from "styled-components";
+
+export const Container = styled.div`
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+`;
+
+export const PokePicture = styled.div`
+    height: 40vh;
+    background-color: grey;
+`
+
+export const PokeName = styled.div`
+    height: 40px;
+    background-color: black;
+`
