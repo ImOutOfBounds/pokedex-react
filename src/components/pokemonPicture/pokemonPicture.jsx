@@ -9,7 +9,7 @@ function PokemonPicture() {
       <PokePictureContainer>
         <PokePicture src={img} />
       </PokePictureContainer>
-      <PokeName>Bulbassaur</PokeName>
+      <PokeName>#0001 - Bulbassaur</PokeName>
     </Container>
   );
 }
