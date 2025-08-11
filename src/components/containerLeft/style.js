@@ -13,5 +13,4 @@ export const Container = styled.div`
   justify-content: flex-start; 
 
   gap: 10px;                 
-  background-color: green;
 `;
