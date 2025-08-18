@@ -55,7 +55,7 @@ const StatsChart = ({ stats }) => {
     scales: {
       x: {
         beginAtZero: true,
-        max: 200, 
+        max: 255, 
       },
     },
   };
