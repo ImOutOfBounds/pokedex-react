@@ -3,7 +3,8 @@ import ContainerLeft from './components/containerLeft/containerLeft';
 import ContainerRight from './components/containerRight/containerRight';
 import styled from 'styled-components';
 import Rectangle from './components/rectangle/Rectangle';
-import { useState, useEffect } from "react";
+import musicFile from './assets/uiSfx.mp3'; 
+import { useState, useEffect, useRef } from "react";
 
 
 const Wrapper = styled.div`
@@ -12,9 +13,11 @@ const Wrapper = styled.div`
 
 function App() {
 
-    const [pokemonId, setPokemonId] = useState(1);
+  const [pokemonId, setPokemonId] = useState(1);
   const [pokemonData, setPokemonData] = useState(null);
   const [pokemonDescription, setPokemonDescription] = useState("");
+
+  const audioRef = useRef(new Audio(musicFile));
 
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -26,9 +29,13 @@ function App() {
         const resSpecies = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`);
         const species = await resSpecies.json();
         const flavorText = species.flavor_text_entries.find(entry => entry.language.name === "en");
+
+        
         if (flavorText) {
           setPokemonDescription(flavorText.flavor_text.replace(/\f/g, " "));
         }
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
       } catch (err) {
         console.error("Erro ao buscar Pokémon:", err);
       }

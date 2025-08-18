@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    height: 100vh;
 `;
 
 export const InfoSection = styled.div`
     width: 40vw;
+    height: 70%;
     align-items: center;
     margin: 20px auto 0 auto;
     background-color: #eee;
@@ -17,12 +19,16 @@ export const InfoSection = styled.div`
 
 export const ButtonSection = styled.div`
     width: 40vw;
-    height: 25vh;
+    height: 30%;
     margin: 0 auto;
     padding: 20px;
     background-color: #1f1f1fff;
     border: 5px solid #101010ff;
-`
+
+    display: flex;       
+    justify-content: flex-end; 
+    align-items: center; 
+`;
 
 export const TypeSection = styled.div `
     display: flex;
@@ -30,5 +36,5 @@ export const TypeSection = styled.div `
 `
 
 export const Title = styled.h1`
-    font-size: 20px;
+    font-size: 15px;
 `

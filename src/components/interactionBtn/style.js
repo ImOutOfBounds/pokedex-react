@@ -13,8 +13,8 @@ const pulseGlow = keyframes`
 
 export const Container = styled.div`
   position: relative;
-  width: 15vh;
-  height: 15vh;
+  width: 10vh;
+  height: 10vh;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(69, 205, 220, 1) 0%, rgba(32, 35, 250, 0.77) 70%);
   overflow: hidden;
