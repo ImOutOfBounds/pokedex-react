@@ -22,7 +22,7 @@ export const PokePictureContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-image: url(${props => props.bgImage});
+  background-image: url(${props => props.$bgImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

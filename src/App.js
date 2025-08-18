@@ -35,7 +35,6 @@ function App() {
           setPokemonDescription(flavorText.flavor_text.replace(/\f/g, " "));
         }
         audioRef.current.currentTime = 0;
-        audioRef.current.play();
       } catch (err) {
         console.error("Erro ao buscar Pokémon:", err);
       }
@@ -44,8 +43,17 @@ function App() {
     fetchPokemon();
   }, [pokemonId]);
 
-  const handlePrev = () => setPokemonId(prev => (prev > 1 ? prev - 1 : 1025));
-  const handleNext = () => setPokemonId(prev => (prev === 1025 ? 1 : prev + 1));
+  const handlePrev = () => {
+    setPokemonId(prev => (prev > 1 ? prev - 1 : 1025));
+    audioRef.current.currentTime = 0;
+    audioRef.current.play().catch(() => {});
+  };
+
+  const handleNext = () => {
+    setPokemonId(prev => (prev === 1025 ? 1 : prev + 1));
+    audioRef.current.currentTime = 0;
+    audioRef.current.play().catch(() => {});
+  };
 
   return (
     

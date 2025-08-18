@@ -9,7 +9,7 @@ function PokemonPicture({ pokemon }) {
 
   return (
     <Container>
-      <PokePictureContainer bgImage={bg}>
+      <PokePictureContainer $bgImage={bg}>
         <PokePicture src={pokemon.sprites.other['official-artwork'].front_default} alt={nameCapitalized} />
       </PokePictureContainer>
       <PokeName>#{idFormatted} - {nameCapitalized}</PokeName>

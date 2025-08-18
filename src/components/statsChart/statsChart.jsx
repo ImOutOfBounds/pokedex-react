@@ -23,7 +23,6 @@ const StatsChart = ({ stats }) => {
     "Velocidade",
   ];
 
-  console.log("Stats recebidos no Chart:", stats);
   const safeStats = Array.isArray(stats) && stats.length === labels.length ? stats : [0, 0, 0, 0, 0, 0];
 
   const data = {
