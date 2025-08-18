@@ -2,7 +2,7 @@ import TypeMarker from '../typeMarker/typeMarker';
 import { Container, TypeSection, Title, InfoSection, ButtonSection } from './style';
 import InteractionBtn from '../interactionBtn/interactionBtn.jsx';
 
-function PokemonDesc() {
+function PokemonDesc(pokemonData) {
   return (
     <Container>
         <InfoSection>

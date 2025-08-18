@@ -1,14 +1,14 @@
 import { Container, BtnContainer, BigButton, MidBtn } from './style';
 import { FaArrowLeft, FaArrowRight, FaBars } from "react-icons/fa";
 
-function NavBar() {
+function NavBar({ onPrev, onNext }) {
   return (
     <Container>
-        <BtnContainer>
-            <BigButton><FaArrowLeft /> pokemon tal</BigButton>
-            <BigButton>pokemon tal <FaArrowRight /></BigButton>
-            <MidBtn> <FaBars /></MidBtn>
-        </BtnContainer>
+      <BtnContainer>
+        <BigButton onClick={onPrev}><FaArrowLeft /> Anterior</BigButton>
+        <BigButton onClick={onNext}>Próximo <FaArrowRight /></BigButton>
+        <MidBtn><FaBars /></MidBtn>
+      </BtnContainer>
     </Container>
   );
 }
