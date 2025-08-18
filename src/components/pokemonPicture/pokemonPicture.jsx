@@ -1,15 +1,18 @@
 import { Container, PokePictureContainer, PokePicture, PokeName } from './style';
-import img from '../../assets/001.png';
 import bg from '../../assets/bg1.png';
 
+function PokemonPicture({ pokemon }) {
+  if (!pokemon) return null;
 
-function PokemonPicture() {
+  const idFormatted = pokemon.id.toString().padStart(4, "0");
+  const nameCapitalized = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
   return (
     <Container>
       <PokePictureContainer bgImage={bg}>
-        <PokePicture src={img} />
+        <PokePicture src={pokemon.sprites.other['official-artwork'].front_default} alt={nameCapitalized} />
       </PokePictureContainer>
-      <PokeName>#0001 - Bulbassaur</PokeName>
+      <PokeName>#{idFormatted} - {nameCapitalized}</PokeName>
     </Container>
   );
 }

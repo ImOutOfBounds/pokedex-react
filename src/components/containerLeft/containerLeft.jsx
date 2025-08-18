@@ -1,12 +1,12 @@
-import { Container } from './style';
-import PokemonPicture from '../pokemonPicture/pokemonPicture';
-import StatsChart from '../statsChart/statsChart';
+import { Container } from "./style";
+import PokemonPicture from "../pokemonPicture/pokemonPicture";
+import StatsChart from "../statsChart/statsChart";
 
-function ContainerLeft() {
+function ContainerLeft({ pokemon }) {
   return (
     <Container>
-      <PokemonPicture />
-      <StatsChart />
+      <PokemonPicture pokemon={pokemon} />
+      <StatsChart pokemon={pokemon} />
     </Container>
   );
 }
